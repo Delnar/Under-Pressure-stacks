@@ -30,8 +30,19 @@ func _on_math_connect(sender):
 		return false	
 	if sender is CharacterBody2D:
 		var Power: int = get_meta("Power")
+		var Operator: String = sender.get_meta("Operator")
 		var NewPower: int = sender.get_meta("Power")
-		Power = Power + NewPower
+		match Operator:
+			"X":
+				Power = Power * NewPower
+			"+":
+				Power = Power + NewPower
+			"/":
+				Power = Power / NewPower
+			"-":
+				Power = Power - NewPower
+			_:
+				Power = Power + NewPower
 		set_meta("Power", Power)
 		sender.queue_free()
 	return true

@@ -29,7 +29,8 @@ metadata/Power = 5
 
 [node name="Enemy05" parent="Enemies" instance=ExtResource("1_j1f8d")]
 position = Vector2(343, 649)
-metadata/Power = 5
+metadata/Operator = "X"
+metadata/Power = 2
 
 [node name="Enemy06" parent="Enemies" instance=ExtResource("1_j1f8d")]
 position = Vector2(343, 585)
