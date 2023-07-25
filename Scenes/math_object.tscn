@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk2wfepurtxrj"]
+
+[ext_resource type="Script" path="res://Scripts/math_object.gd" id="1_fdhd4"]
+[ext_resource type="Texture2D" uid="uid://340jkh0000r0" path="res://Images/square_background.png" id="2_a5jtl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rblbl"]
+size = Vector2(64, 64)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gxhk"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_fdhd4")
+metadata/isPlayer = false
+metadata/Operator = ""
+metadata/Power = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rblbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a5jtl")
+
+[node name="PowerLabel" type="Label" parent="."]
+offset_left = -23.0
+offset_top = -32.0
+offset_right = 23.0
+offset_bottom = -6.0
+text = "12345"
+label_settings = SubResource("LabelSettings_5gxhk")
+horizontal_alignment = 1
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
