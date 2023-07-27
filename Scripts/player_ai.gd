@@ -10,12 +10,8 @@ func _physics_process(delta):
 	move_and_collide(Vector2(0, 1)) # Move down 1 pixel per physics frame
 
 func UpdateLabelText():
-	var b: String = get_meta("Operator")
-	var c: bool = get_meta("isPlayer")
 	var Power: int = get_meta("Power")
-	if (c):
-		b = ""
-	get_node("PowerLabel").text = b + str(Power)
+	get_node("PowerLabel").text = str(Power)
 	
 
 func _on_input_event(viewport, event, shape_idx):
@@ -25,9 +21,6 @@ func _on_input_event(viewport, event, shape_idx):
 				SignalBus.emit_signal("math_connect", self)
 				
 func _on_math_connect(sender):	
-	var c: bool = get_meta("isPlayer")
-	if (c == false):
-		return false	
 	if sender is CharacterBody2D:
 		var Power: int = get_meta("Power")
 		var NewPower: int = sender.get_meta("Power")

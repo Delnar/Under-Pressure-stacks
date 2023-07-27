@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk2wfepurtxrj"]
+
+[ext_resource type="Script" path="res://Scripts/enemy_ai.gd" id="1_7v058"]
+[ext_resource type="Texture2D" uid="uid://chmgen6ncysja" path="res://Images/Fish_1/Fish_move_1_000.png" id="2_j3mpt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rblbl"]
+size = Vector2(64, 64)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5gxhk"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+input_pickable = true
+script = ExtResource("1_7v058")
+metadata/isPlayer = false
+metadata/Operator = ""
+metadata/Power = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rblbl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_j3mpt")
+
+[node name="PowerLabel" type="Label" parent="."]
+offset_left = -24.0
+offset_top = -74.0
+offset_right = 22.0
+offset_bottom = -48.0
+text = "12345"
+label_settings = SubResource("LabelSettings_5gxhk")
+horizontal_alignment = 1
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

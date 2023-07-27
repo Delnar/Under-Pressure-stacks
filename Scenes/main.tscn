@@ -1,39 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://caijjipoie1ys"]
+[gd_scene load_steps=4 format=3 uid="uid://caijjipoie1ys"]
 
-[ext_resource type="PackedScene" uid="uid://dk2wfepurtxrj" path="res://Scenes/math_object.tscn" id="1_j1f8d"]
+[ext_resource type="PackedScene" uid="uid://dk2wfepurtxrj" path="res://Scenes/enemy.tscn" id="1_j1f8d"]
+[ext_resource type="PackedScene" uid="uid://dny61yxkiftq" path="res://Scenes/player.tscn" id="1_tm05a"]
 [ext_resource type="PackedScene" uid="uid://boq1n5xl0asj2" path="res://Scenes/floor.tscn" id="2_hgjod"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_j1f8d")]
-position = Vector2(124, 713)
-metadata/isPlayer = true
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_tm05a")]
+position = Vector2(89, 712)
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy01" parent="Enemies" instance=ExtResource("1_j1f8d")]
-position = Vector2(234, 713)
-metadata/Power = 5
-
-[node name="Enemy02" parent="Enemies" instance=ExtResource("1_j1f8d")]
-position = Vector2(234, 649)
-metadata/Power = 5
-
-[node name="Enemy03" parent="Enemies" instance=ExtResource("1_j1f8d")]
-position = Vector2(234, 585)
-metadata/Power = 5
-
-[node name="Enemy04" parent="Enemies" instance=ExtResource("1_j1f8d")]
-position = Vector2(343, 713)
-metadata/Power = 5
-
-[node name="Enemy05" parent="Enemies" instance=ExtResource("1_j1f8d")]
-position = Vector2(343, 649)
-metadata/Power = 5
-
-[node name="Enemy06" parent="Enemies" instance=ExtResource("1_j1f8d")]
-position = Vector2(343, 585)
-metadata/Power = 5
+[node name="CharacterBody2D" parent="Enemies" instance=ExtResource("1_j1f8d")]
+position = Vector2(296, 566)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("2_hgjod")]
 position = Vector2(998, 755)

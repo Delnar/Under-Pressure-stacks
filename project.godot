@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Math Game"
+config/name="Under Presure Stacks"
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
+boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 config/icon="res://icon.svg"
 
 [autoload]

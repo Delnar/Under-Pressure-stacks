@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dk2wfepurtxrj"]
+[gd_scene load_steps=5 format=3 uid="uid://dny61yxkiftq"]
 
-[ext_resource type="Script" path="res://Scripts/math_object.gd" id="1_fdhd4"]
-[ext_resource type="Texture2D" uid="uid://340jkh0000r0" path="res://Images/square_background.png" id="2_a5jtl"]
+[ext_resource type="Script" path="res://Scripts/player_ai.gd" id="1_u5bvk"]
+[ext_resource type="Texture2D" uid="uid://340jkh0000r0" path="res://Images/square_background.png" id="2_lr05g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rblbl"]
 size = Vector2(64, 64)
@@ -11,7 +11,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 input_pickable = true
-script = ExtResource("1_fdhd4")
+script = ExtResource("1_u5bvk")
 metadata/isPlayer = false
 metadata/Operator = ""
 metadata/Power = 0
@@ -20,7 +20,7 @@ metadata/Power = 0
 shape = SubResource("RectangleShape2D_rblbl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_a5jtl")
+texture = ExtResource("2_lr05g")
 
 [node name="PowerLabel" type="Label" parent="."]
 offset_left = -23.0
