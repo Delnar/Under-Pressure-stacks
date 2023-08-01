@@ -1,0 +1,109 @@
+[gd_scene load_steps=22 format=3 uid="uid://dvtp6n3h63n2q"]
+
+[ext_resource type="Texture2D" uid="uid://c5es7owdni2kr" path="res://Images/Sea urchin/Sea urchin_attack_000.png" id="1_rp6dl"]
+[ext_resource type="Texture2D" uid="uid://cnn2bpcwd2ljg" path="res://Images/Sea urchin/Sea urchin_attack_001.png" id="2_jscow"]
+[ext_resource type="Texture2D" uid="uid://bbairvg1tc3hn" path="res://Images/Sea urchin/Sea urchin_attack_002.png" id="3_o5xoq"]
+[ext_resource type="Texture2D" uid="uid://cj1nrlox4873u" path="res://Images/Sea urchin/Sea urchin_attack_003.png" id="4_l7dcx"]
+[ext_resource type="Texture2D" uid="uid://bk4gfdnjetys8" path="res://Images/Sea urchin/Sea urchin_attack_004.png" id="5_psh3y"]
+[ext_resource type="Texture2D" uid="uid://b27jx6puse878" path="res://Images/Sea urchin/Sea urchin_attack_005.png" id="6_dtbd7"]
+[ext_resource type="Texture2D" uid="uid://c2mmmkdg6mj7l" path="res://Images/Sea urchin/Sea urchin_attack_006.png" id="7_avu3k"]
+[ext_resource type="Texture2D" uid="uid://2lqtbi4tqqf1" path="res://Images/Sea urchin/Sea urchin_attack_007.png" id="8_jwr6d"]
+[ext_resource type="Texture2D" uid="uid://bgc4mfaub38us" path="res://Images/Sea urchin/Sea urchin_attack_008.png" id="9_ch04y"]
+[ext_resource type="Texture2D" uid="uid://2fomgj250el" path="res://Images/Sea urchin/Sea urchin_attack_009.png" id="10_xgod3"]
+[ext_resource type="Texture2D" uid="uid://icxootws204k" path="res://Images/Sea urchin/Sea urchin_idle_000.png" id="11_665mh"]
+[ext_resource type="Texture2D" uid="uid://ck8or1ywh4qg4" path="res://Images/Sea urchin/Sea urchin_idle_001.png" id="12_5g31h"]
+[ext_resource type="Texture2D" uid="uid://tmfedwo28vu4" path="res://Images/Sea urchin/Sea urchin_idle_002.png" id="13_hcscr"]
+[ext_resource type="Texture2D" uid="uid://ckpk2d7onxfjl" path="res://Images/Sea urchin/Sea urchin_idle_003.png" id="14_28pm5"]
+[ext_resource type="Texture2D" uid="uid://fq3euamsixjv" path="res://Images/Sea urchin/Sea urchin_idle_004.png" id="15_ercrw"]
+[ext_resource type="Texture2D" uid="uid://bfyri1g7uc477" path="res://Images/Sea urchin/Sea urchin_idle_005.png" id="16_fnj6p"]
+[ext_resource type="Texture2D" uid="uid://bsewqw0a1mvsi" path="res://Images/Sea urchin/Sea urchin_idle_006.png" id="17_mu7u2"]
+[ext_resource type="Texture2D" uid="uid://csf0dx02ari4t" path="res://Images/Sea urchin/Sea urchin_idle_007.png" id="18_7356d"]
+[ext_resource type="Texture2D" uid="uid://db1ao53nmfhni" path="res://Images/Sea urchin/Sea urchin_idle_009.png" id="19_138hv"]
+[ext_resource type="Texture2D" uid="uid://bcwqsx3yrww67" path="res://Images/Sea urchin/Sea urchin_idle_008.png" id="20_gfoh6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1df2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rp6dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jscow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_o5xoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l7dcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_psh3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dtbd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_avu3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jwr6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ch04y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xgod3")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_665mh")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_665mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5g31h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hcscr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_28pm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ercrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fnj6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mu7u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7356d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_138hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gfoh6")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 15.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_1df2t")
+animation = &"Attack"
+frame = 9
+frame_progress = 1.0

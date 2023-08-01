@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 func _ready():	
 	UpdateLabelText()
+	(get_node("fish_01_AnimatedSprite2D") as AnimatedSprite2D).animation = "Move"
+	(get_node("fish_01_AnimatedSprite2D") as AnimatedSprite2D).play()
 	
-func _physics_process(delta):
-	move_and_collide(Vector2(0, 1)) # Move down 1 pixel per physics frame
+# func _physics_process(delta):
+	# move_and_collide(Vector2(0, 1)) # Move down 1 pixel per physics frame
 
 func UpdateLabelText():
 	var b: String = get_meta("Operator")

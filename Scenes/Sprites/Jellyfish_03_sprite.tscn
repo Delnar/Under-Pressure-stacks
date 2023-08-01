@@ -1,0 +1,108 @@
+[gd_scene load_steps=22 format=3 uid="uid://c6gnbrphscmg1"]
+
+[ext_resource type="Texture2D" uid="uid://tws75d5130it" path="res://Images/Jellyfish_3/Jellyfish_move_3_000.png" id="1_br7u7"]
+[ext_resource type="Texture2D" uid="uid://dg661k6afowij" path="res://Images/Jellyfish_3/Jellyfish_die_3_000.png" id="2_c2rnf"]
+[ext_resource type="Texture2D" uid="uid://dyisqkti21tg5" path="res://Images/Jellyfish_3/Jellyfish_die_3_001.png" id="3_0q3wy"]
+[ext_resource type="Texture2D" uid="uid://b0ti8d23oygs5" path="res://Images/Jellyfish_3/Jellyfish_die_3_002.png" id="4_mkdcg"]
+[ext_resource type="Texture2D" uid="uid://o0q6svhir38m" path="res://Images/Jellyfish_3/Jellyfish_die_3_003.png" id="5_32orw"]
+[ext_resource type="Texture2D" uid="uid://l7pjof32ud10" path="res://Images/Jellyfish_3/Jellyfish_die_3_004.png" id="6_6okhm"]
+[ext_resource type="Texture2D" uid="uid://ckvt2d6k4jas3" path="res://Images/Jellyfish_3/Jellyfish_die_3_005.png" id="7_q3lmf"]
+[ext_resource type="Texture2D" uid="uid://bc2fkmeahgj5g" path="res://Images/Jellyfish_3/Jellyfish_die_3_006.png" id="8_rapos"]
+[ext_resource type="Texture2D" uid="uid://e7qnc363d5g" path="res://Images/Jellyfish_3/Jellyfish_die_3_007.png" id="9_kt5us"]
+[ext_resource type="Texture2D" uid="uid://bai0nni86m5om" path="res://Images/Jellyfish_3/Jellyfish_die_3_008.png" id="10_eh224"]
+[ext_resource type="Texture2D" uid="uid://ewrcbkcmc0wt" path="res://Images/Jellyfish_3/Jellyfish_die_3_009.png" id="11_ki7ec"]
+[ext_resource type="Texture2D" uid="uid://cgg2mokgs0wuv" path="res://Images/Jellyfish_3/Jellyfish_move_3_001.png" id="12_dpaas"]
+[ext_resource type="Texture2D" uid="uid://yqcnj47p1pp6" path="res://Images/Jellyfish_3/Jellyfish_move_3_002.png" id="13_sa3d6"]
+[ext_resource type="Texture2D" uid="uid://dwko4f82is66w" path="res://Images/Jellyfish_3/Jellyfish_move_3_003.png" id="14_p1syk"]
+[ext_resource type="Texture2D" uid="uid://cia6diavc7s4n" path="res://Images/Jellyfish_3/Jellyfish_move_3_004.png" id="15_ihu1l"]
+[ext_resource type="Texture2D" uid="uid://cs6swnyvmjayp" path="res://Images/Jellyfish_3/Jellyfish_move_3_005.png" id="16_1eq6c"]
+[ext_resource type="Texture2D" uid="uid://dd01e1dpgy6dp" path="res://Images/Jellyfish_3/Jellyfish_move_3_006.png" id="17_bxe5c"]
+[ext_resource type="Texture2D" uid="uid://buarwki8jge6y" path="res://Images/Jellyfish_3/Jellyfish_move_3_007.png" id="18_6x5ui"]
+[ext_resource type="Texture2D" uid="uid://c6uqq7de55ugu" path="res://Images/Jellyfish_3/Jellyfish_move_3_008.png" id="19_35oj1"]
+[ext_resource type="Texture2D" uid="uid://s7qnmsci5243" path="res://Images/Jellyfish_3/Jellyfish_move_3_009.png" id="20_vduwg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8kaxk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_br7u7")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c2rnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0q3wy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mkdcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_32orw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6okhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q3lmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rapos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kt5us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_eh224")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ki7ec")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_br7u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dpaas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sa3d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_p1syk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ihu1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1eq6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bxe5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6x5ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_35oj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vduwg")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 15.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_8kaxk")
+animation = &"Move"
+frame_progress = 0.215223
